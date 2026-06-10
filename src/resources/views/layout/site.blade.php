@@ -6,25 +6,15 @@
 </head>
 
 <body>
-
     <div cress="page-wrapper">
 
         @include('partials.header')
 
-        @include('home.banner')
-
-        @include('home.sobre')
-
-        @include('home.servicos')
-
-        @include('home.cachos')
-
-        @include('home.galeria')
-
-        @include('home.produtos')
+        <main>
+            @yield('content')
+        </main>
 
         @include('partials.footer')
-
     </div>
 
     @include('partials.script')

@@ -5,7 +5,7 @@
         <!-- Logo -->
         <div class="footer-logo">
 
-            <img src="img/logo.png" alt="logo" class="logo">
+            <img src="{{asset('felsk/img/logo.png') }}" alt="logo" class="logo">
 
             <hr>
 
@@ -27,7 +27,7 @@
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Produtos</a></li>
                 <li><a href="#">Contato</a></li>
-
+            </ul>
         </div>
 
         <!-- Contato -->

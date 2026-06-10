@@ -2,7 +2,7 @@
   <section class="sobre">
       <div class="container">
           <div class="img_sb">
-              <img src="img/foto_fefe.png" alt="Barbeiro da Felsk Barber" />
+              <img src="{{ asset('felsk/img/foto_fefe.png') }}" alt="Barbeiro da Felsk Barber" />
           </div>
 
           <div class="textos_sb">

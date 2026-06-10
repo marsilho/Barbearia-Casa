@@ -15,10 +15,15 @@
 
           <ul class="redes">
               <li>
-                  <a href="#"><img src="img/instaBlack.svg" alt="Logo Instagram" /></a>
+                  <a href="#">
+                      <img src="{{ asset('felsk/img/instaBlack.svg') }}" alt="Logo Instagram" />
+                  </a>
               </li>
+
               <li>
-                  <a href="#"><img src="img/whatsBlack.svg" alt="Logo WhatsApp" /></a>
+                  <a href="#">
+                      <img src="{{ asset('felsk/img/whatsBlack.svg') }}" alt="Logo WhatsApp" />
+                  </a>
               </li>
           </ul>
       </div>
