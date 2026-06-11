@@ -535,23 +535,6 @@ body {
   border-radius: 50%;
 }
 
-.depoimentos-bolinhas {
-  margin-top: 30px;
-}
-
-.depoimentos-bolinhas span {
-  width: 15px;
-  height: 15px;
-  background: black;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.depoimentos-bolinhas .ativa {
-  background: #8d7f77;
-}
-
 /* FOOTER */
 
 .footer {

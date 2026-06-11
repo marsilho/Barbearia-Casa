@@ -67,11 +67,4 @@
 
         </div>
 
-        <div class="depoimentos-bolinhas">
-            <span class="ativa"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
     </section>

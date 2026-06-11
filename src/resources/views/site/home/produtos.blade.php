@@ -16,7 +16,6 @@
             <img src="{{ asset('felsk/img/ativador.png') }}" alt="Ativador de cachos">
 
             <h3>Ativador de cachos</h3>
-
         </a>
 
         <!-- PRODUTO 2 -->
@@ -26,7 +25,6 @@
             <img src="{{ asset('felsk/img/pomada_modelar.png') }}" alt="Pomada modeladora">
 
             <h3>Pomada modeladora</h3>
-
         </a>
 
         <!-- PRODUTO 3 -->
@@ -36,7 +34,6 @@
             <img src="{{ asset('felsk/img/creme.png') }}" alt="Creme para pentear">
 
             <h3>Creme para pentear</h3>
-
         </a>
 
         <!-- PRODUTO 4 -->
@@ -46,7 +43,6 @@
             <img src="{{ asset('felsk/img/mascara.png') }}" alt="Máscara capilar">
 
             <h3>Máscara capilar</h3>
-
         </a>
 
         <!-- PRODUTO 4 -->
@@ -56,15 +52,9 @@
             <img src="{{ asset('felsk/img/mascara.png') }}" alt="Máscara capilar">
 
             <h3>Máscara capilar</h3>
-
         </a>
 
     </div>
-
-
-
-
-    
 
     <!-- BOTÃO -->
     <div class="produtos-btn">
