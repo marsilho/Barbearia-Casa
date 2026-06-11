@@ -5,7 +5,7 @@
         <!-- Logo -->
         <div class="footer-logo">
 
-            <img src="{{asset('felsk/img/logo.png') }}" alt="logo" class="logo">
+            <img src="{{asset('felsk/img/visual/logo.png') }}" alt="logo" class="logo">
 
             <hr>
 

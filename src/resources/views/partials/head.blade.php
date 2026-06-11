@@ -15,7 +15,7 @@
         content="Barbearia Felsk Barber: Onde o corte afiado encontra a liberdade das ruas." />
 
     <!-- OPEN GRAPH -->
-    <meta property="og:image" content="{{ asset('felsk/img/logo_felsk.png') }}" />
+    <meta property="og:image" content="{{ asset('felsk/img/visual/logo_felsk.png') }}" />
     <meta property="og:type" content="website" />
 
     <!-- ICONES E MANIFESTO -->
