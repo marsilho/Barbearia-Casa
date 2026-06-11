@@ -4,10 +4,11 @@
         <!--begin::Brand Link-->
         <a href="./index.html" class="brand-link">
             <!--begin::Brand Image-->
-            <img src="{{ asset('dash/assets/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow" />
+            <img src="{{ asset('felsk/img/logo.png') }}" alt="FelskBarber Logo"
+                class="brand-image opacity-75 shadow" />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
-            <span class="brand-text fw-light">AdminLTE 4</span>
+            <span class="brand-text fw-light">FelskBarber Admin</span>
             <!--end::Brand Text-->
         </a>
         <!--end::Brand Link-->
@@ -17,6 +18,22 @@
     <div class="sidebar-wrapper">
         <nav class="mt-2">
             <!--begin::Sidebar Menu-->
+
+
+            {{-- Agendamentos felsk barber --}}
+            <li class="nav-header">Gestão de agendamentos</li>
+
+            <li class="nav-item">
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon bi bi-circle"></i>
+                            <p>Agendamentos feitos</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation"
                 aria-label="Main navigation" data-accordion="false" id="navigation">
                 <li class="nav-item menu-open">
@@ -50,18 +67,6 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./widgets/small-box.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Small Box</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./widgets/info-box.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>info Box</p>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a href="./widgets/cards.html" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
@@ -133,7 +138,7 @@
                         </li>
                     </ul>
                 </li>
-                
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon bi bi-filetype-js"></i>
@@ -150,110 +155,6 @@
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="./docs/browser-support.html" class="nav-link">
-                        <i class="nav-icon bi bi-browser-edge"></i>
-                        <p>Browser Support</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./docs/how-to-contribute.html" class="nav-link">
-                        <i class="nav-icon bi bi-hand-thumbs-up-fill"></i>
-                        <p>How To Contribute</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./docs/faq.html" class="nav-link">
-                        <i class="nav-icon bi bi-question-circle-fill"></i>
-                        <p>FAQ</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./docs/license.html" class="nav-link">
-                        <i class="nav-icon bi bi-patch-check-fill"></i>
-                        <p>License</p>
-                    </a>
-                </li>
-
-                <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-circle-fill"></i>
-                        <p>Level 1</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-circle-fill"></i>
-                        <p>
-                            Level 1
-                            <i class="nav-arrow bi bi-chevron-right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Level 2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>
-                                    Level 2
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon bi bi-record-circle-fill"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon bi bi-record-circle-fill"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon bi bi-record-circle-fill"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Level 2</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-circle-fill"></i>
-                        <p>Level 1</p>
-                    </a>
-                </li>
-
-                <li class="nav-header">LABELS</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-circle text-danger"></i>
-                        <p class="text">Important</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-circle text-warning"></i>
-                        <p>Warning</p>
-                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
