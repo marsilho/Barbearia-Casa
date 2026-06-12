@@ -4,8 +4,7 @@
         <!--begin::Brand Link-->
         <a href="./index.html" class="brand-link">
             <!--begin::Brand Image-->
-            <img src="{{ asset('felsk/img/logo.png') }}" alt="FelskBarber Logo"
-                class="brand-image opacity-75 shadow" />
+            <img src="{{ asset('felsk/img/logo.png') }}" alt="FelskBarber Logo" class="brand-image opacity-75 shadow" />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
             <span class="brand-text fw-light">FelskBarber Admin</span>
@@ -18,22 +17,6 @@
     <div class="sidebar-wrapper">
         <nav class="mt-2">
             <!--begin::Sidebar Menu-->
-
-
-            {{-- Agendamentos felsk barber --}}
-            <li class="nav-header">Gestão de agendamentos</li>
-
-            <li class="nav-item">
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon bi bi-circle"></i>
-                            <p>Agendamentos feitos</p>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation"
                 aria-label="Main navigation" data-accordion="false" id="navigation">
                 <li class="nav-item menu-open">
@@ -44,37 +27,63 @@
                             <i class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./index.html" class="nav-link active">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Dashboard v1</p>
-                            </a>
-                        </li>
-                </li>
-                <li class="nav-item">
-                    <a href="./generate/theme.html" class="nav-link">
-                        <i class="nav-icon bi bi-palette"></i>
-                        <p>Theme Generate</p>
-                    </a>
-                </li>
+
+                    {{-- GESTÃO DE AGENDAMENTOS --}}
+                <li class="nav-header">GESTÃO DE AGENDAMENTOS</li>
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-box-seam-fill"></i>
+                        <i class="nav-icon bi bi-shop"></i>
                         <p>
-                            Widgets
+                            Agendamentos
                             <i class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
+
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./widgets/cards.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
-                                <p>Cards</p>
+                                <p>Categorias</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Produtos</p>
                             </a>
                         </li>
                     </ul>
                 </li>
+
+                {{-- GESTÃO DE CLIENTES --}}
+                <li class="nav-header">GESTÃO DE CLIENTES</li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-shop"></i>
+                        <p>
+                            Clientes
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Categorias</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Produtos</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon bi bi-tree-fill"></i>
@@ -137,30 +146,6 @@
                             </a>
                         </li>
                     </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-filetype-js"></i>
-                        <p>
-                            Javascript
-                            <i class="nav-arrow bi bi-chevron-right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./docs/javascript/treeview.html" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Treeview</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon bi bi-circle text-info"></i>
-                        <p>Informational</p>
-                    </a>
                 </li>
             </ul>
             <!--end::Sidebar Menu-->

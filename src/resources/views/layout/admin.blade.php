@@ -18,6 +18,8 @@
         </main>
 
         @include('admin.partials.app-footer')
+
+        @include('admin.partials.script')
     </div>
 
     {{-- SCRIPT DO DASHBOARD --}}
