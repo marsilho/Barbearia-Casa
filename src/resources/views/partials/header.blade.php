@@ -15,14 +15,14 @@
 
           <ul class="redes">
               <li>
-                  <a href="#">
+                  <a href="https://www.instagram.com/felskbarber/" target="_blank">
                       <img src="{{ asset('felsk/img/instaBlack.svg') }}" alt="Logo Instagram" />
                   </a>
               </li>
 
               <li>
                   <a href="#">
-                      <img src="{{ asset('felsk/img/whatsBlack.svg') }}" alt="Logo WhatsApp" />
+                      <img src="{{ asset('felsk/img/user.png') }}" alt="Logo WhatsApp" style="width: 30px; padding: 9px;" />
                   </a>
               </li>
           </ul>

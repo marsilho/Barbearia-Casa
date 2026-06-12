@@ -425,15 +425,18 @@ body {
 .produtos-cards {
   display: flex;
   justify-content: center;
-  gap: 10em;
   flex-wrap: wrap;
+  width: auto;
 }
 
 .produtos-card {
   text-decoration: none;
   color: white;
   transition: 0.3s;
+  width: auto !important;
+  
 }
+
 
 .produtos-card img {
   width: 170px;
@@ -529,8 +532,7 @@ body {
 }
 
 .depoimentos-foto {
-  width: 60px;
-  height: 60px;
+ width: auto;
   background: black;
   border-radius: 50%;
 }
