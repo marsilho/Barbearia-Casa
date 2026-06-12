@@ -12,9 +12,9 @@
                     <!--begin::Small Box Widget 1-->
                     <div class="small-box text-bg-primary">
                         <div class="inner">
-                            <h3>150</h3>
+                            <h3>30</h3>
 
-                            <p>New Orders</p>
+                            <p>Novos agendamentos</p>
                         </div>
                         <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true">
@@ -24,7 +24,7 @@
                         </svg>
                         <a href="#"
                             class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
-                            More info <i class="bi bi-link-45deg"></i>
+                            Mais informações <i class="bi bi-link-45deg"></i>
                         </a>
                     </div>
                     <!--end::Small Box Widget 1-->
@@ -34,9 +34,9 @@
                     <!--begin::Small Box Widget 2-->
                     <div class="small-box text-bg-success">
                         <div class="inner">
-                            <h3>53<sup class="fs-5">%</sup></h3>
+                            <h3>60<sup class="fs-5">%</sup></h3>
 
-                            <p>Bounce Rate</p>
+                            <p>Faturamento</p>
                         </div>
                         <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -46,7 +46,7 @@
                         </svg>
                         <a href="#"
                             class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
-                            More info <i class="bi bi-link-45deg"></i>
+                            Mais informações <i class="bi bi-link-45deg"></i>
                         </a>
                     </div>
                     <!--end::Small Box Widget 2-->
@@ -58,7 +58,7 @@
                         <div class="inner">
                             <h3>44</h3>
 
-                            <p>User Registrations</p>
+                            <p>Usuarios registrados</p>
                         </div>
                         <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -80,7 +80,7 @@
                         <div class="inner">
                             <h3>65</h3>
 
-                            <p>Unique Visitors</p>
+                            <p>Visitas ao site</p>
                         </div>
                         <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

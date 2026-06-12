@@ -1,0 +1,30 @@
+.app-sidebar.bg-body-secondary.shadow {
+    background-color: #0f0f0f !important;
+}
+
+.app-wrapper,
+.app-header.navbar.navbar-expand.bg-body,
+.app-footer {
+    background-color: #2c2c2c !important;
+}
+
+.app-footer {
+    color: #fefefe;
+}
+
+.row h3 {
+    color: #fefefe;
+}
+
+.brand-image {
+    max-height: 70px !important;
+    width: auto !important;
+}
+
+.sidebar-brand {
+    height: 6.5rem;
+}
+
+.bi.bi-list{
+    color: #fefefe;
+}
