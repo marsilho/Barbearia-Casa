@@ -36,12 +36,12 @@
             <h2>Contato</h2>
 
             <p><a href="mailto:contato@felskbarber.com.br">contato@felskbarber.com.br</a></p>
-            <p><a href="tel:+5511982832136">(11) 98283-2136</a></p>
+            <p><a href="https://w.app/v7mohe"target="_blank">(11) 98283-2136</a></p>
 
             <br>
 
-            <p>R. Ascenso Fernandes, 1230</p>
-            <p>Parque Paulistano, São Paulo - SP, 08081-040</p>
+            <p><a href="https://maps.app.goo.gl/82kDpM2m8StBcG9b6" target="_blank">R. Ascenso Fernandes, 1230 <br>
+            Parque Paulistano, São Paulo - SP, 08081-040</a></p>
 
         </div>
 

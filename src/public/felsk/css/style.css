@@ -232,6 +232,11 @@ body {
   gap: 0;
 }
 
+.servicos a{
+
+}
+
+
 .servicos img {
   width: 275px;
   height: 350px;
@@ -434,7 +439,7 @@ body {
   color: white;
   transition: 0.3s;
   width: auto !important;
-  
+
 }
 
 
@@ -456,7 +461,7 @@ body {
 
 /* botão */
 .produtos-btn {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .produtos-btn a {
@@ -496,14 +501,14 @@ body {
 .depoimentos-cards {
   display: flex;
   justify-content: center;
-  gap: 5em;
   flex-wrap: wrap;
 }
 
 .depoimentos-card {
   background: #d8d2cc;
   color: #333;
-  width: 320px;
+  width: 450px !important;
+  height: 310px !important;
   padding: 25px;
   border-radius: 25px;
   text-align: left;
@@ -511,7 +516,7 @@ body {
 }
 
 .depoimentos-aspas {
-  font-size: 90px;
+  font-size: 100px;
   color: #aaa;
   position: absolute;
   top: 0;
@@ -519,7 +524,7 @@ body {
 }
 
 .depoimentos-card p {
-  margin-top: 40px;
+  margin-top: 90px;
   font-size: 18px;
   font-family: var(--fonteBase);
 }
@@ -537,7 +542,7 @@ body {
   border-radius: 50%;
 }
 
-.depoimentos-bolinhas {
+/* .depoimentos-bolinhas {
   margin-top: 30px;
 }
 
@@ -552,7 +557,7 @@ body {
 
 .depoimentos-bolinhas .ativa {
   background: #8d7f77;
-}
+} */
 
 /* FOOTER */
 

@@ -35,8 +35,8 @@ $(document).ready(function () {
 
 // Animação Depoimentos
 $('.depoimentos-cards').slick({
-  slidesToShow: 2,
-  slidesToScroll: 1,
+  slidesToShow: 3,
+  slidesToScroll: 2,
   autoplay: true,
   autoplaySpeed: 2000,
 });
