@@ -6,8 +6,6 @@
             <!--begin::Brand Image-->
             <img src="{{ asset('felsk/img/logo.png') }}" alt="FelskBarber Logo" class="brand-image opacity-75 shadow" />
             <!--end::Brand Image-->
-            <!--begin::Brand Text-->
-            <!--end::Brand Text-->
         </a>
         <!--end::Brand Link-->
     </div>
@@ -35,13 +33,13 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
-                                <p>Categorias</p>
+                                <p>Marcados</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
-                                <p>Produtos</p>
+                                <p>Realizados</p>
                             </a>
                         </li>
                     </ul>
@@ -63,13 +61,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
-                                <p>Categorias</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Produtos</p>
+                                <p>Clientes</p>
                             </a>
                         </li>
                     </ul>
@@ -103,6 +95,34 @@
                     </ul>
                 </li>
 
+                {{-- GESTÃO DE SERVIÇOS --}}
+                <li class="nav-header">GESTÃO DE SERVIÇOS</li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-shop"></i>
+                        <p>
+                            Serviços
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Categoria</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route ('admin.servicos.index')}}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Serviços</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 {{-- GESTÃO DE USUARIOS --}}
                 <li class="nav-header">GESTÃO DE ESTOQUE</li>
 
@@ -119,18 +139,11 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
-                                <p>Categorias</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
                                 <p>Produtos</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-
 
             </ul>
             <!--end::Sidebar Menu-->

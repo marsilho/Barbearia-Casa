@@ -12,9 +12,9 @@
                     <!--begin::Small Box Widget 1-->
                     <div class="small-box text-bg-primary">
                         <div class="inner">
-                            <h3>30</h3>
+                            <h3>11</h3>
 
-                            <p>Novos agendamentos</p>
+                            <p>Total de serviços cadastrados</p>
                         </div>
                         <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true">
@@ -101,27 +101,6 @@
                 <!--end::Col-->
             </div>
             <!--end::Row-->
-
-            {{-- <!--begin::Row-->
-            <div class="row">
-                <!-- Start col -->
-                <div class="col-lg-12 connectedSortable">
-
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h3 class="card-title">Sales Value</h3>
-                        </div>
-
-                        <div class="card-body">
-                            <div id="revenue-chart"></div>
-                        </div>
-                    </div>
-                    <!-- /.card -->
-
-                </div>
-                <!-- /.row (main row) -->
-            </div>
-            <!--end::Container--> --}}
         </div>
         <!--end::App Content-->
     @endsection
