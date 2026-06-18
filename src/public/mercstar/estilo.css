@@ -29,8 +29,108 @@
     color: #fefefe;
 }
 
+/* ----------------------------------
+---------- Menu principal ---------------
+------------------------------------- */
+/* FUNDO PRINCIPAL */
+.app-main,
+.app-content {
+    background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+}
 
-/* ---------- Calendario ----------- */
+/* TÍTULO */
+.app-content-header h1,
+h1 {
+    color: #fefefe;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.breadcrumb a {
+    color: #bf821d !important;
+}
+
+/* CARDS DO DASHBOARD */
+.small-box {
+    background: linear-gradient(135deg, #1f1f1f, #2c2c2c) !important;
+    border: 1px solid rgba(191, 130, 29, .35);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(0,0,0,.35);
+    transition: .3s ease;
+}
+
+.small-box:hover {
+    transform: translateY(-4px);
+    border-color: #bf821d;
+    box-shadow: 0 12px 28px rgba(0,0,0,.5);
+}
+
+/* NÚMEROS */
+.small-box h3 {
+    color: #bf821d !important;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+/* TEXTOS */
+.small-box p {
+    color: #fefefe !important;
+    font-weight: 500;
+}
+
+/* ÍCONES */
+.small-box .small-box-icon {
+    color: rgba(191, 130, 29, .25) !important;
+}
+
+/* RODAPÉ DO CARD */
+.small-box-footer {
+    background-color: rgba(191, 130, 29, .15) !important;
+    color: #bf821d !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.small-box-footer:hover {
+    background-color: #bf821d !important;
+    color: #0f0f0f !important;
+}
+
+/* SIDEBAR */
+.app-sidebar {
+    background-color: #0f0f0f !important;
+    border-right: 1px solid rgba(191, 130, 29, .25);
+}
+
+.sidebar-brand {
+    background-color: #111 !important;
+    border-bottom: 1px solid rgba(191, 130, 29, .25);
+}
+
+/* MENU */
+.nav-sidebar .nav-link {
+    border-radius: 10px;
+    margin: 4px 8px;
+}
+
+.nav-sidebar .nav-link:hover,
+.nav-sidebar .nav-link.active {
+    background-color: rgba(191, 130, 29, .18) !important;
+    color: #bf821d !important;
+}
+
+/* HEADER E FOOTER */
+.app-header,
+.app-footer {
+    background-color: #242424 !important;
+    border-color: rgba(255,255,255,.15) !important;
+    color: #fefefe;
+}
+
+/* ----------------------------------
+---------- Calendario ---------------
+------------------------------------- */
 
 .card {
     background-color: #fefefe;
