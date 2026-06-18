@@ -3,7 +3,7 @@
 
 @section('content')
 
-    @include('site.contato.formulario')
+    @include('site.contato.form')
 
     @include('site.contato.mapa')
 

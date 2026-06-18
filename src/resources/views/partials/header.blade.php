@@ -5,11 +5,11 @@
 
           <nav>
               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Sobre</a></li>
-                  <li><a href="#">Serviços</a></li>
-                  <li><a href="#">Produtos</a></li>
-                  <li><a href="{{ route('contato') }}">Contato</a></li>
+                  <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'ativo' : '' }}">Home</a></li>
+                  <li><a href="{{ route('sobre') }}" class="{{ request()->routeIs('sobre') ? 'ativo' : '' }}">Sobre</a></li>
+                  <li><a href="#" class="{{ request()->routeIs('servicos') ? 'ativo' : '' }}">Serviços</a></li>
+                  <li><a href="#" class="{{ request()->routeIs('produtos') ? 'ativo' : '' }}">Produtos</a></li>
+                  <li><a href="{{ route('contato') }}" class="{{ request()->routeIs('contato') ? 'ativo' : '' }}">Contato</a></li>
               </ul>
           </nav>
 

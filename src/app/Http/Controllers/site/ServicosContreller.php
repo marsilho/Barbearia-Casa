@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class ServicosController extends Controller
 {
-
+    public function index()
+    {
+        return view('site.servicos.servicos');
+    }
 }
