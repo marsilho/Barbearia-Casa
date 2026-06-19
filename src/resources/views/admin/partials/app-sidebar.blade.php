@@ -17,7 +17,7 @@
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation"
                 aria-label="Main navigation" data-accordion="false" id="navigation">
 
-                    {{-- GESTÃO DE AGENDAMENTOS --}}
+                {{-- GESTÃO DE AGENDAMENTOS --}}
                 <li class="nav-header">GESTÃO DE AGENDAMENTOS</li>
 
                 <li class="nav-item">
@@ -103,7 +103,7 @@
 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route ('admin.categorias.index')}}" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Categoria</p>
                             </a>

@@ -4,7 +4,7 @@
     <div class="app-content">
         <div class="container-fluid">
 
-            <div class="card">
+            <div class="card ">
                 <div class="card-header">
                     <h3 class="card-title">Calendário de Agendamentos</h3>
                 </div>

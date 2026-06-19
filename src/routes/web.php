@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\DashController;
 use App\Http\Controllers\admin\ServicoController;
 use App\Http\Controllers\admin\ClientesController;
 use App\Http\Controllers\admin\CalendarioController;
+use App\Http\Controllers\admin\CategoriaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\site\HomeController;
 
@@ -11,15 +12,34 @@ use App\Http\Controllers\site\HomeController;
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
 
+// Admin Dashboard   //prefix -- qualquer nome vai ter o admin.seuArquivo
+Route::prefix('admin')->name('admin.')->group(function () {
 
-// Admin
-Route::get('/admin', [DashController::class, 'index'])->name('dash');
+    // Pg Clientes Dashboard
+    Route::get('/clientes', [ClientesController::class, 'indexCliente'])->name('clientes.index');
 
-// Pg Clientes Dashboard
-Route::get('/clientes', [ClientesController::class, 'indexCliente'])->name('admin.clientes.index');
+    // Pg Serviços Dashboard
+    Route::get('/servicos', [ServicoController::class, 'indexServico'])->name('servicos.index');
 
-// Pg Serviços Dashboard
-Route::get('/servicos', [ServicoController::class, 'indexServico'])->name('admin.servicos.index');
+    // Pg Calendario Dashboard
+    Route::get('/calendario', [CalendarioController::class, 'indexCalendario'])->name('calendario.index');
 
-// Pg Calendario Dashboard
-Route::get('/calendario', [CalendarioController::class, 'indexCalendario'])->name('admin.calendario.index');
+    // Pg Categorias Dashboard
+    Route::get('/categoria', [CategoriaController::class, 'indexCategoria'])->name('categorias.index');
+
+    
+
+    Route::middleware('auth:admin')->group(function () {
+
+        Route::get('/', [DashController::class, 'index'])->name('dash');
+
+        // Modal Categorias: Desativar
+        Route::patch('/categorias/{id}/desativar', [CategoriaController::class, 'desativar'])->name('categoria.desativar');
+
+        // Modal Categorias: Ativar
+        Route::patch('/categorias/{id}/ativar', [CategoriaController::class, 'ativar'])->name('categoria.ativar');
+
+        // Modal Categorias: Editar
+        Route::put('/categorias/{id}', [CategoriaController::class, 'update'])->name('categoria.update');
+    });
+});

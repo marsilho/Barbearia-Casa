@@ -97,17 +97,6 @@ h1 {
     color: #0f0f0f !important;
 }
 
-/* SIDEBAR */
-.app-sidebar {
-    background-color: #0f0f0f !important;
-    border-right: 1px solid rgba(191, 130, 29, .25);
-}
-
-.sidebar-brand {
-    background-color: #111 !important;
-    border-bottom: 1px solid rgba(191, 130, 29, .25);
-}
-
 /* MENU */
 .nav-sidebar .nav-link {
     border-radius: 10px;
@@ -126,6 +115,101 @@ h1 {
     background-color: #242424 !important;
     border-color: rgba(255,255,255,.15) !important;
     color: #fefefe;
+}
+
+
+/* ----------------------------------
+---------- Sidebar ---------------
+------------------------------------- */
+.app-sidebar {
+    background: linear-gradient(180deg, #0f0f0f 50%, #1a1a1a 80%) !important;
+    border-right: 1px solid rgba(191, 130, 29, .25);
+    overflow-y: hidden;
+}
+
+/* LOGO */
+.sidebar-brand {
+    height: 100px; /* ajuste como quiser */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.sidebar-brand img,
+.brand-image {
+    max-height: 75px !important;
+    width: auto !important;
+    transition: .3s;
+}
+
+.sidebar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* TÍTULOS DO MENU */
+.sidebar-menu .nav-header,
+.nav-sidebar .nav-header {
+    color: #bf821d !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    padding-left: 16px;
+}
+
+/* LINKS */
+.nav-sidebar .nav-link {
+    border-radius: 10px;
+    margin: 4px 8px;
+    transition: .3s ease;
+    color: #fefefe;
+}
+
+/* ÍCONES */
+.nav-sidebar .nav-icon {
+    color: #bf821d !important;
+    opacity: .9;
+}
+
+/* SETAS */
+.nav-sidebar .nav-arrow {
+    color: #bf821d !important;
+}
+
+/* HOVER */
+.nav-sidebar .nav-link:hover {
+    background-color: rgba(191, 130, 29, .15) !important;
+    color: #bf821d !important;
+}
+
+/* ATIVO */
+.nav-sidebar .nav-link.active {
+    background: linear-gradient(
+        90deg,
+        rgba(191, 130, 29, .28),
+        rgba(191, 130, 29, .06)
+    ) !important;
+    border-left: 3px solid #bf821d;
+    color: #bf821d !important;
+}
+
+/* SUBMENU */
+.nav-treeview .nav-link {
+    margin-left: 18px;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+.nav-treeview .nav-link:hover {
+    background-color: rgba(191, 130, 29, .10) !important;
+    color: #bf821d !important;
+}
+
+/* SUAVIZAÇÃO */
+.sidebar-wrapper {
+    backdrop-filter: blur(5px);
 }
 
 /* ----------------------------------
@@ -244,4 +328,89 @@ h1 {
 .card-title {
     color: #bf821d;
     font-weight: 600;
+}
+
+
+
+/* ----------------------------------
+-- Gerenciamento de Categorias -----
+------------------------------------- */
+
+/* ----------------------------------
+   GERENCIAMENTO DE CATEGORIAS
+----------------------------------- */
+
+/* BOTÃO NOVA CATEGORIA */
+.card-tools .btn-primary {
+    background: #bf821d !important;
+    border-color: #bf821d !important;
+    color: #111 !important;
+    font-weight: 700;
+}
+
+/* TABELA */
+.table {
+    margin-bottom: 0 !important;
+    color: #fff !important;
+}
+
+.table thead th {
+    background: #151515 !important;
+    color: #bf821d !important;
+    border-color: rgba(191, 130, 29, 0.25) !important;
+    padding: 16px 22px !important;
+}
+
+.table tbody td {
+    background: #202020 !important;
+    color: #f5f5f5 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    padding: 12px 22px !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background: #262626 !important;
+}
+
+.table tbody tr:hover td {
+    background: #2f2f2f !important;
+    transition: .3s;
+}
+
+/* STATUS */
+.badge {
+    border-radius: 20px;
+    padding: 6px 12px;
+}
+
+/* AÇÕES */
+.btn-warning {
+    background: #bf821d !important;
+    border-color: #bf821d !important;
+    color: #111 !important;
+}
+
+.btn-danger {
+    background: #8b1e2d !important;
+    border-color: #8b1e2d !important;
+}
+
+/* SCROLL APENAS NA TABELA */
+.card-body {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* SCROLL PERSONALIZADA */
+.card-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-body::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background: #bf821d;
+    border-radius: 10px;
 }
