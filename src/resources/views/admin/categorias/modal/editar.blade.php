@@ -9,7 +9,7 @@
             </div>
 
             <div class="modal-body">
-                <form method="POST" action="{{ route('admin.categoria.update', $categoria->id_categoria) }}">
+                <form method="POST" action="{{ route('admin.categorias.update', $categoria->id_categoria) }}">
                     @csrf {{-- Medida de segunrança /// cria um codigo de segurança(Token) // próprio código de segunraça do laravel --}}
                     @method('PUT')
 
@@ -33,14 +33,6 @@
 
                         <div class="mb-3">
                             <div class="row">
-                                <div class="col-6">
-                                    <label for="ordem_categoria" class="form-label">Ordem</label>
-                                    <input type="number" class="form-control" id="ordem_categoria"
-                                        name="ordem_categoria" aria-describedby="alerta-ordem_categoria" Required value="{{$categoria->ordem_categoria}}">
-                                    <div id="alerta-ordem_categoria" class="form-text">
-                                        Informe a ordem da categoria
-                                    </div>
-                                </div>
                                 <div class="col-6">
                                     <label for="nome_categoria" class="form-label">Status</label>
                                     <select class="form-select" aria-label="Selecione uma opção"

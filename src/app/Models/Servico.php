@@ -19,9 +19,10 @@ class Servico extends Model
 
     protected $fillable = [
         'nome_servico',
+        'id_categoria',
         'descricao_servico',
         'foto_servico',
-        'status_servico'
+        'status_servico',
     ];
 
 

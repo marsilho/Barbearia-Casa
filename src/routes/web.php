@@ -15,6 +15,9 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 // Admin Dashboard   //prefix -- qualquer nome vai ter o admin.seuArquivo
 Route::prefix('admin')->name('admin.')->group(function () {
 
+    // NAVEGAÇÃO SIDE-BAR
+    // pg inicial
+    Route::get('/', [DashController::class, 'index'])->name('dash');
     // Pg Clientes Dashboard
     Route::get('/clientes', [ClientesController::class, 'indexCliente'])->name('clientes.index');
 
@@ -26,20 +29,34 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     // Pg Categorias Dashboard
     Route::get('/categoria', [CategoriaController::class, 'indexCategoria'])->name('categorias.index');
+    // -----------------------------
 
-    
+    // ROTAS DE CATEGORIAS
+    // Modal Categorias: Criar
+    Route::post('/categorias', [CategoriaController::class, 'store'])->name('categorias.store');
 
-    Route::middleware('auth:admin')->group(function () {
+    // Modal Categorias: Desativar
+    Route::patch('/categorias/{id}/desativar', [CategoriaController::class, 'desativar'])->name('categorias.desativar');
 
-        Route::get('/', [DashController::class, 'index'])->name('dash');
+    // Modal Categorias: Ativar
+    Route::patch('/categorias/{id}/ativar', [CategoriaController::class, 'ativar'])->name('categorias.ativar');
 
-        // Modal Categorias: Desativar
-        Route::patch('/categorias/{id}/desativar', [CategoriaController::class, 'desativar'])->name('categoria.desativar');
+    // Modal Categorias: Editar
+    Route::put('/categorias/{id}', [CategoriaController::class, 'update'])->name('categorias.update');
+    // -------------------------------
 
-        // Modal Categorias: Ativar
-        Route::patch('/categorias/{id}/ativar', [CategoriaController::class, 'ativar'])->name('categoria.ativar');
+    // ROTAS DE SERVIÇOS
+    // Route::post('/produtos', [ProdutoDashController::class, 'storeProduto'])->name('produto.store');
 
-        // Modal Categorias: Editar
-        Route::put('/categorias/{id}', [CategoriaController::class, 'update'])->name('categoria.update');
-    });
+    // Modal Serviços: Criar
+    Route::post('/servicos', [ServicoController::class, 'storeServico'])->name('servicos.store');
+
+    // Modal Serviços: Desativar
+    Route::patch('/servicos/{id}/desativar', [ServicoController::class, 'desativar'])->name('servicos.desativar');
+
+    // Modal Serviços: Ativar
+    Route::patch('/servicos/{id}/ativar', [ServicoController::class, 'ativar'])->name('servicos.ativar');
+
+    // Modal Serviços: Editar
+    Route::put('/servicos/{id}', [ServicoController::class, 'update'])->name('servicos.update');
 });

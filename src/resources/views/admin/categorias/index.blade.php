@@ -124,7 +124,7 @@
                                             {{-- DESATIVAR --}}
                                             @if ($linha->status_categoria === 'ATIVO')
                                                 <form
-                                                    action="{{ route('admin.categoria.desativar', $linha->id_categoria) }} "
+                                                    action="{{ route('admin.categorias.desativar', $linha->id_categoria) }} "
                                                     method="post">
                                                     @csrf
                                                     @method('PATCH')
@@ -133,7 +133,7 @@
                                                     </button>
                                                 </form>
                                             @else
-                                                <form action="{{ route('admin.categoria.ativar', $linha->id_categoria) }} "
+                                                <form action="{{ route('admin.categorias.ativar', $linha->id_categoria) }} "
                                                     method="post">
                                                     @csrf
                                                     @method('PATCH')
@@ -159,4 +159,6 @@
             <!--end::Row-->
         </div>
         <!--end::App Content-->
+        
+        @include('admin.categorias.modal.criar')
     @endsection

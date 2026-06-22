@@ -16,6 +16,27 @@ class CategoriaController extends Controller
         return view('admin.categorias.index', compact('categorias'));
     }
 
+    // CRIAR
+    public function store(Request $request)
+    {
+
+        $request->validate([
+            // nome_categoria campos que estão localizados no name="" do formulario dentro do modal
+            'nome_categoria' => 'required|string|max:30',
+            'descricao_categoria' => 'required|string',
+            'status_categoria' => 'required|in:ATIVO,INATIVO'
+        ]);
+
+        Categoria::create([
+            'nome_categoria' => $request->nome_categoria,
+            'descricao_categoria' => $request->descricao_categoria,
+            'status_categoria' => $request->status_categoria
+        ]);
+
+        return Redirect()->route('admin.categorias.index')
+            ->with('success', 'Categoria cadastrada com sucesso!');
+    }
+
     // DESATIVAR
     public function desativar($id)
     {
@@ -28,7 +49,7 @@ class CategoriaController extends Controller
         ]);
 
         return redirect()
-            ->route('admin.categoria.index')
+            ->route('admin.categorias.index')
             ->with('success', 'Categoria desativada com sucesso!');
     }
 
@@ -45,7 +66,7 @@ class CategoriaController extends Controller
         ]);
 
         return redirect()
-            ->route('admin.categoria.index')
+            ->route('admin.categorias.index')
             ->with('success', 'Categoria ativada com sucesso!');
     }
 
@@ -70,7 +91,7 @@ class CategoriaController extends Controller
         ]);
 
         return redirect()
-        ->route('admin.categoria.index')
-        ->with('success', 'Categoria atualizada com sucesso');
+            ->route('admin.categorias.index')
+            ->with('success', 'Categoria atualizada com sucesso');
     }
 }

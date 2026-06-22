@@ -335,10 +335,15 @@ h1 {
 /* ----------------------------------
 -- Gerenciamento de Categorias -----
 ------------------------------------- */
+/* Deixando os icones do editar e desativar ao lado do outro */
+td form {
+    display: inline-block;
+    margin: 0;
+}
 
-/* ----------------------------------
-   GERENCIAMENTO DE CATEGORIAS
------------------------------------ */
+td .btn {
+    margin-right: 5px;
+}
 
 /* BOTÃO NOVA CATEGORIA */
 .card-tools .btn-primary {
@@ -413,4 +418,74 @@ h1 {
 .card-body::-webkit-scrollbar-thumb {
     background: #bf821d;
     border-radius: 10px;
+}
+
+
+/* ----------------------------------
+-- Estilo do Modal Categorias -----
+------------------------------------- */
+
+/* MODAL CATEGORIAS */
+.modal-content {
+    background: #1f1f1f !important;
+    border: 1px solid rgba(191, 130, 29, 0.45) !important;
+    border-radius: 12px !important;
+    color: #fff;
+}
+
+.modal-header {
+    background: #252525;
+    border-bottom: 1px solid rgba(191, 130, 29, 0.3);
+}
+
+.modal-title {
+    color: #bf821d;
+    font-weight: 700;
+}
+
+.modal-body {
+    background: #1f1f1f;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(191, 130, 29, 0.3);
+}
+
+.modal .form-label {
+    color: #f5f5f5;
+    font-weight: 600;
+}
+
+.modal .form-text {
+    color: #aaa !important;
+}
+
+.modal .form-control,
+.modal .form-select {
+    background: #151515 !important;
+    border: 1px solid #3a3a3a !important;
+    color: #fff !important;
+}
+
+.modal .form-control:focus,
+.modal .form-select:focus {
+    border-color: #bf821d !important;
+    box-shadow: 0 0 0 0.2rem rgba(191, 130, 29, 0.25) !important;
+}
+
+.modal .btn-primary {
+    background: #bf821d !important;
+    border-color: #bf821d !important;
+    color: #111 !important;
+    font-weight: 700;
+}
+
+.modal .btn-secondary {
+    background: #3a3a3a !important;
+    border-color: #3a3a3a !important;
+    color: #fff !important;
+}
+
+.btn-close {
+    filter: invert(1);
 }

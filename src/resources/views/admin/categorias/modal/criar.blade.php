@@ -9,7 +9,7 @@
             </div>
 
             <div class="modal-body">
-                <form method="POST" action="{{ route('admin.categoria.store') }}">
+                <form method="POST" action="{{ route('admin.categorias.store') }}">
                     @csrf {{-- Medida de segunrança /// cria um codigo de segurança(Token) // próprio código de segunraça do laravel --}}
                     <div class="card-body">
                         <div class="mb-3">
@@ -22,34 +22,27 @@
                         </div>
                         <div class="mb-3">
                             <label for="descricao_categoria" class="form-label">Descrição</label>
-                            <textarea class="form-control" id="descricao_categoria" name="descricao_categoria" rows="3" aria-describedby="alerta-descricao" Required></textarea>
+                            <textarea class="form-control" id="descricao_categoria" name="descricao_categoria" rows="3"
+                                aria-describedby="alerta-descricao" Required></textarea>
                             <div id="alerta-descricao" class="form-text">
                                 Informe a descrição da categoria
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label for="ordem_categoria" class="form-label">Ordem</label>
-                                    <input type="number" class="form-control" id="ordem_categoria"
-                                        name="ordem_categoria" aria-describedby="alerta-ordem_categoria" Required>
-                                    <div id="alerta-ordem_categoria" class="form-text">
-                                        Informe a ordem da categoria
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <label for="nome_categoria" class="form-label">Status</label>
-                                    <select class="form-select" aria-label="Selecione uma opção"
-                                        aria-describedby="alerta-ordem_categoria" name="status_categoria" Required>
-                                        <option selected>Selecione uma opção</option>
-                                        <option value="ATIVO">ATIVO</option>
-                                        <option value="INATIVO">INATIVO</option>
-                                    </select>
-                                    <div id="alerta-ordem_categoria" class="form-text">
-                                        Informe o status da categoria
-                                    </div>
-                                </div>
+                            <label for="status_categoria" class="form-label">Status</label>
+
+                            <select class="form-select" aria-label="Selecione uma opção"
+                                aria-describedby="alerta-ordem_categoria" name="status_categoria" required>
+
+                                <option selected>Selecione uma opção</option>
+                                <option value="ATIVO">ATIVO</option>
+                                <option value="INATIVO">INATIVO</option>
+
+                            </select>
+
+                            <div id="alerta-ordem_categoria" class="form-text">
+                                Informe o status da categoria
                             </div>
                         </div>
 
