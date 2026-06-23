@@ -22,7 +22,7 @@ class Servico extends Model
         'id_categoria',
         'descricao_servico',
         'foto_servico',
-        'status_servico',
+        'status_servico'
     ];
 
 

@@ -80,8 +80,17 @@
 
 
                 @if (session('success'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('success') }}
+                    <div class="toast-container position-fixed top-0 end-0 p-3">
+                        <div id="toastSuccess" class="toast show text-bg-success" role="alert">
+                            <div class="toast-header">
+                                <strong class="me-auto">Sucesso</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                            </div>
+
+                            <div class="toast-body">
+                                {{ session('success') }}
+                            </div>
+                        </div>
                     </div>
                 @endif
 
@@ -93,11 +102,11 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Gerenciamento de Categorias</h3>
+                        <h3 class="card-title">Gerenciamento de serviços</h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal"
-                                data-bs-target="#TesteModal">
-                                <i class="bi bi-plus">Novo produto</i>
+                                data-bs-target="#ModalServico">
+                                <i class="bi bi-plus">Novo Serviço</i>
                             </button>
                         </div>
                     </div>
@@ -134,7 +143,7 @@
                                             {{-- Puxando os icones da biblioteca bootstrap --}}
                                             {{-- EDITAR --}}
                                             <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
-                                                data-bs-target="#modalEditarProduto{{ $linha->id_servico }}">
+                                                data-bs-target="#modalEditarServico{{ $linha->id_servico }}">
                                                 <i class="bi bi-arrow-counterclockwise"></i>
                                             </button>
 
@@ -160,7 +169,7 @@
                                             @endif
                                         </td>
                                     </tr>
-
+                                    @include('admin.servicos.modal.editar', ['servico' => $linha])
                                 @empty
                                     <tr>
                                         <td>Nenhum produto cadastrada</td>
@@ -175,4 +184,20 @@
             <!--end::Row-->
         </div>
         <!--end::App Content-->
+        @include('admin.servicos.modal.criar')
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                const toastEl = document.getElementById('toastSuccess');
+
+                if (toastEl) {
+                    const toast = new bootstrap.Toast(toastEl, {
+                        delay: 3000, // 3 segundos
+                        autohide: true // fecha sozinho
+                    });
+
+                    toast.show();
+                }
+            });
+        </script>
     @endsection
