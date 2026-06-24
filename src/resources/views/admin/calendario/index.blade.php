@@ -9,7 +9,7 @@
                     <h3 class="card-title">Calendário de Agendamentos</h3>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body calendario-body">
                     <div id="calendar"></div>
                 </div>
             </div>

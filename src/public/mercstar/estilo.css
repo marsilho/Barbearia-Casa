@@ -401,7 +401,12 @@ td .btn {
 }
 
 /* SCROLL APENAS NA TABELA */
-.card-body {
+.card-body.tabela-scroll {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.tabela-scroll {
     max-height: 500px;
     overflow-y: auto;
 }
@@ -488,4 +493,33 @@ td .btn {
 
 .btn-close {
     filter: invert(1);
+}
+
+/* ----------------------------------
+-- POP UP das ações -----
+------------------------------------- */
+.toast-felsk {
+    background: #1f1f1f;
+    color: #fefefe;
+    border: 1px solid rgba(191, 130, 29, .6) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .45);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.toast-felsk-header {
+    background: linear-gradient(90deg, #bf821d, #d89b1d);
+    color: #111;
+    border-bottom: none;
+    font-weight: 700;
+}
+
+.toast-felsk-header i {
+    color: #111;
+}
+
+.toast-felsk-body {
+    background: #1f1f1f;
+    color: #fefefe;
+    font-weight: 500;
 }

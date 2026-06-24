@@ -78,16 +78,18 @@
                     <!--end::Small Box Widget 4-->
                 </div>
 
-
+                <!------- POP UP  -------->
                 @if (session('success'))
-                    <div class="toast-container position-fixed top-0 end-0 p-3">
-                        <div id="toastSuccess" class="toast show text-bg-success" role="alert">
-                            <div class="toast-header">
+                    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+                        <div id="toastSuccess" class="toast toast-felsk border-0" role="alert">
+                            <div class="toast-header toast-felsk-header">
+                                <i class="bi bi-check-circle-fill me-2"></i>
                                 <strong class="me-auto">Sucesso</strong>
-                                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
                             </div>
 
-                            <div class="toast-body">
+                            <div class="toast-body toast-felsk-body">
                                 {{ session('success') }}
                             </div>
                         </div>
@@ -112,7 +114,7 @@
                     </div>
                     <!-- /.card-header -->
 
-                    <div class="card-body p-0">
+                    <div class="card-body p-0 tabela-scroll">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -185,6 +187,8 @@
         </div>
         <!--end::App Content-->
         @include('admin.servicos.modal.criar')
+
+        <!------ POP UP ao criar ou atualizar algum serviço ------>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
 
@@ -192,7 +196,7 @@
 
                 if (toastEl) {
                     const toast = new bootstrap.Toast(toastEl, {
-                        delay: 3000, // 3 segundos
+                        delay: 2000, // 2 segundos
                         autohide: true // fecha sozinho
                     });
 

@@ -2,7 +2,7 @@
     <!--begin::Sidebar Brand-->
     <div class="sidebar-brand">
         <!--begin::Brand Link-->
-        <a href="./index.html" class="brand-link">
+        <a href="{{ route('admin.dash') }}" class="brand-link">
             <!--begin::Brand Image-->
             <img src="{{ asset('felsk/img/logo.png') }}" alt="FelskBarber Logo" class="brand-image opacity-75 shadow" />
             <!--end::Brand Image-->
