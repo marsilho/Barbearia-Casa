@@ -7,7 +7,7 @@
               <ul>
                   <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'ativo' : '' }}">Home</a></li>
                   <li><a href="{{ route('sobre') }}" class="{{ request()->routeIs('sobre') ? 'ativo' : '' }}">Sobre</a></li>
-                  <li><a href="#" class="{{ request()->routeIs('servicos') ? 'ativo' : '' }}">Serviços</a></li>
+                  <li><a href="{{ route('servicos') }}" class="{{ request()->routeIs('servicos') ? 'ativo' : '' }}">Serviços</a></li>
                   <li><a href="#" class="{{ request()->routeIs('produtos') ? 'ativo' : '' }}">Produtos</a></li>
                   <li><a href="{{ route('contato') }}" class="{{ request()->routeIs('contato') ? 'ativo' : '' }}">Contato</a></li>
               </ul>

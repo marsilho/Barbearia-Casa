@@ -42,7 +42,7 @@ body {
 .topo {
     /* Inicio: escuro com opacidade (ex: 50% preto) */
     background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
+    
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -702,22 +702,139 @@ nav ul li a.ativo {
     border-radius: 50%;
 }
 
-/* .depoimentos-bolinhas {
-  margin-top: 30px;
+/* ======== PÁGINA CONTATO ======== */
+
+
+/* formulario de contato */
+
+.duvidas {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+
 }
 
-.depoimentos-bolinhas span {
-  width: 15px;
-  height: 15px;
-  background: black;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 5px;
+/* TEXTO */
+.texto-duvidas {
+    width: 50%;
+    color: #fff;
+    font-family: var(--fonteBase);
 }
 
-.depoimentos-bolinhas .ativa {
-  background: #8d7f77;
-} */
+.texto-duvidas h2 {
+    font-family: var(--fonteMenu);
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 15px;
+    line-height: 2;
+}
+
+.texto-duvidas h2 span,
+.texto-duvidas p span {
+    color: #bf821d;
+}
+
+.texto-duvidas p {
+    font-family: var(--fonteBase);
+    font-size: 16px;
+    margin-bottom: 22px;
+    color: #fff;
+}
+
+.texto-duvidas strong {
+    display: block;
+    margin-top: 35px;
+    color: #fff;
+    font-family: var(--fonteBase);
+    font-size: 15px;
+}
+
+/* FORM */
+.form-duvidas {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-duvidas .linha {
+    display: flex;
+    gap: 30px;
+}
+
+.form-duvidas input,
+.form-duvidas textarea {
+    width: 100%;
+    background-color: #333;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 13px;
+    font-family: var(--fonteBase);
+    font-size: 14px;
+}
+
+.form-duvidas input::placeholder,
+.form-duvidas textarea::placeholder {
+    color: #dcdcdc;
+}
+
+.form-duvidas textarea {
+    height: 160px;
+    width: auto;
+    resize: none;
+}
+
+.form-duvidas select {
+    width: 100%;
+    background-color: #333;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 13px;
+    font-family: var(--fonteBase);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-duvidas select option {
+    background-color: #333;
+    color: #fff;
+}
+
+/* BOTÕES */
+.botoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.botoes button {
+    width: 170px;
+    padding: 12px 0;
+    border: none;
+    background-color: #d89200;
+    color: #fff;
+    font-family: var(--fonteBase);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botoes button:hover {
+    background-color: #bf821d;
+}
+
+
+
+
+
+
+
+
 
 /* FOOTER */
 
@@ -813,4 +930,29 @@ hr {
     padding: 15px 50px;
     font-size: 12px;
     flex-wrap: wrap;
+}
+
+
+
+/*==================================== RESPONSIVO ============================= */
+
+@media (max-width: 900px) {
+    .duvidas {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .texto-duvidas,
+    .form-duvidas {
+        width: 100%;
+    }
+    
+    .form-duvidas .linha {
+        flex-direction: column;
+        gap: 18px;
+    }
+    
+    .botoes {
+        justify-content: space-between;
+    }
 }
