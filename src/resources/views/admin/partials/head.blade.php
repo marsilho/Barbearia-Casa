@@ -20,6 +20,7 @@
     <meta name="supported-color-schemes" content="light dark" />
 
     <link rel="preload" href="{{ asset('dash/css/adminlte.css') }}" as="style" />
+    
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
@@ -37,6 +38,8 @@
     <!-- AdminLTE -->
     <link rel="stylesheet" href="{{ asset('dash/css/adminlte.css') }}" />
     <link rel="stylesheet" href="{{ asset('mercstar/estilo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('felsk/css/style.css') }}" />
+
     <!-- ApexCharts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
         integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous" />

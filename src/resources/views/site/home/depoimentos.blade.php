@@ -36,6 +36,23 @@
                 <div class="depoimentos-aspas">“</div>
 
                 <p>
+                Simplesmente o mais brabo da ZL
+                </p>
+
+                <div class="depoimentos-cliente">
+                    <div class="depoimentos-foto"></div
+                        >
+                    <h3>Pedro Souza</h3>
+                </div>
+
+            </div>
+
+               <!-- Card 2 -->
+            <div class="depoimentos-card">
+
+                <div class="depoimentos-aspas">“</div>
+
+                <p>
                     Recomendo demais, barbeiro extremamente atencioso e
                     carismático, profissional demais além de um amigo excelente.
                 </p>
@@ -64,6 +81,8 @@
                 </div>
 
             </div>
+
+
 
         </div>
 

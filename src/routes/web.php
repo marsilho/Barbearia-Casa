@@ -5,8 +5,12 @@ use App\Http\Controllers\admin\ServicoController;
 use App\Http\Controllers\admin\ClientesController;
 use App\Http\Controllers\admin\CalendarioController;
 use App\Http\Controllers\admin\CategoriaController;
+
+use App\Http\Controllers\site\ContatoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\site\HomeController;
+use App\Http\Controllers\site\ServicosController;
+use App\Http\Controllers\site\SobreController;
 
 // Site
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -68,3 +72,19 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('/calendario/agendar', [CalendarioController::class, 'store'])
         ->name('calendario.store');
 });
+
+
+// Página Contato
+Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
+
+
+// Rota para enviar o formulário de contato
+Route::post('/contato', [ContatoController::class, 'enviar'])->name('duvidas.enviar');
+
+
+
+// Página Sobre
+Route::get('/sobre', [SobreController::class, 'sobre'])->name('sobre');
+
+// Página Serviços
+Route::get('/servicos', [ServicosController::class, 'index'])->name('servicos');
