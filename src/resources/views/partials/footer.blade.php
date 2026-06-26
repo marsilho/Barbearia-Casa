@@ -5,7 +5,7 @@
         <!-- Logo -->
         <div class="footer-logo">
 
-            <img src="{{asset('felsk/img/visual/logo.png') }}" alt="logo" class="logo">
+            <img src="{{ asset('felsk/img/visual/logo.png') }}" alt="logo" class="logo">
 
             <hr>
 
@@ -22,11 +22,11 @@
             <h2>Navegação</h2>
 
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('sobre') }}">Sobre</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="{{ route('contato') }}">Contato</a></li>
             </ul>
         </div>
 
@@ -41,7 +41,7 @@
             <br>
 
             <p><a href="https://maps.app.goo.gl/82kDpM2m8StBcG9b6" target="_blank">R. Ascenso Fernandes, 1230 <br>
-            Parque Paulistano, São Paulo - SP, 08081-040</a></p>
+                    Parque Paulistano, São Paulo - SP, 08081-040</a></p>
 
         </div>
 
@@ -50,8 +50,16 @@
     <!-- Parte de baixo -->
     <div class="footer-bottom">
 
-        <p>copyright© 2025 - Criado e Desenvolvido por MercStar</p>
+        <div class="footer-texto">
+            <p>Copyright © 2025 - Criado e Desenvolvido por MercStar</p>
+            <p>TIP05 - Senac São Miguel Paulista</p>
+        </div>
 
-        <p>TIP05 - Senac São Miguel Paulista</p>
+        <div class="footer-admin">
+            <a href="{{ route('admin.dash') }}" class="btn-admin">
+                <i class="fas fa-shield-halved"></i>
+                Área Restrita
+            </a>
+        </div>
 
     </div>

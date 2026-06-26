@@ -21,6 +21,7 @@ class ContatoController extends Controller
             'nome_contato' => 'required|string|max:80',
             'email_contato' => 'required|email|max:100',
             'telefone_contato' => 'nullable|string|max:20',
+            'assunto_contato' => 'required|string|max:100',
             'mensagem_contato' => 'required|string',
         ]);
         
@@ -32,9 +33,7 @@ class ContatoController extends Controller
             'mensagem_contato' => $request->mensagem_contato,
         ]); 
 
-        // Aqui pode estar sendo processado os dados, como enviar um email ou salvar no banco de dados.
-
         // Redirecionar de volta para a página de contato com uma mensagem de sucesso
-       return redirect()->route('duvidas.enviar')->with('success', 'Sua mensagem foi enviada com sucesso!');
+       return redirect()->route('contato')->with('success', 'Sua mensagem foi enviada com sucesso!');
     }
 }
