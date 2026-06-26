@@ -45,6 +45,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::put('/categorias/{id}', [CategoriaController::class, 'update'])->name('categorias.update');
     // -------------------------------
 
+
     // ROTAS DE SERVIÇOS
     // Route::post('/produtos', [ProdutoDashController::class, 'storeProduto'])->name('produto.store');
 
@@ -59,4 +60,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     // Modal Serviços: Editar
     Route::put('/servicos/{id}', [ServicoController::class, 'update'])->name('servicos.update');
+
+    // ROTAS CALENDARIO
+    Route::get('/calendario/eventos', [CalendarioController::class, 'eventos'])
+        ->name('calendario.eventos');
+
+    Route::post('/calendario/agendar', [CalendarioController::class, 'store'])
+        ->name('calendario.store');
 });

@@ -78,6 +78,23 @@
                     <!--end::Small Box Widget 4-->
                 </div>
 
+                @if (session('success'))
+                    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index:9999;">
+                        <div id="toastSuccess" class="toast toast-felsk border-0" role="alert">
+                            <div class="toast-header toast-felsk-header">
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                <strong class="me-auto">Sucesso</strong>
+
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+                            </div>
+
+                            <div class="toast-body toast-felsk-body">
+                                {{ session('success') }}
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Gerenciamento de Categorias</h3>
@@ -144,7 +161,7 @@
                                             @endif
                                         </td>
                                     </tr>
-                                    @include('admin.categorias.modal.editar', ['categoria' => $linha]) 
+                                    @include('admin.categorias.modal.editar', ['categoria' => $linha])
                                 @empty
                                     <tr>
                                         <td>Nenhuma categoria cadastrada</td>
@@ -159,6 +176,21 @@
             <!--end::Row-->
         </div>
         <!--end::App Content-->
-        
+
         @include('admin.categorias.modal.criar')
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const toastEl = document.getElementById('toastSuccess');
+
+                if (toastEl) {
+                    const toast = new bootstrap.Toast(toastEl, {
+                        delay: 2000,
+                        autohide: true
+                    });
+
+                    toast.show();
+                }
+            });
+        </script>
     @endsection
