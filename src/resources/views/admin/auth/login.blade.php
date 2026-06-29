@@ -11,7 +11,7 @@
 <body class="login-page bg-body-secondary">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../index2.html"><b>Barbearia</b>Felskbarber</a>
+            <a href="../index2.html"><b>Barbearia</b> Felskbarber</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">

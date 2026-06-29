@@ -56,7 +56,7 @@
         </div>
 
         <div class="footer-admin">
-            <a href="{{ route('admin.dash') }}" class="btn-admin">
+            <a href="{{ route('admin.login') }}" class="btn-admin">
                 <i class="fas fa-shield-halved"></i>
                 Área Restrita
             </a>
