@@ -1,6 +1,5 @@
 <?php
 
-
 use App\Http\Controllers\site\ContatoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\site\HomeController;
@@ -30,7 +29,7 @@ Route::get('/servicos', [ServicosController::class, 'index'])->name('servicos');
 
 
 
-
+use App\Http\Controllers\admin\AuthController;
 use App\Http\Controllers\admin\DashController;
 use App\Http\Controllers\admin\ServicoController;
 use App\Http\Controllers\admin\ClientesController;
@@ -41,7 +40,12 @@ use App\Http\Controllers\admin\CategoriaController;
 
 // Admin Dashboard   //prefix -- qualquer nome vai ter o admin.seuArquivo
 Route::prefix('admin')->name('admin.')->group(function () {
-    
+
+
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'autenticar'])->name('login.autenticar');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
     Route::middleware('auth:admin')->group(function () {
 
         // NAVEGAÇÃO SIDE-BAR
@@ -96,12 +100,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::post('/calendario/agendar', [CalendarioController::class, 'store'])
             ->name('calendario.store');
-
-
     });
-
-
 });
-
-
-

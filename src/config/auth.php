@@ -42,6 +42,16 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'usuario',
+        ],
+
+        'cliente' => [
+            'driver' => 'session',
+            'provider' => 'cliente',
+        ],
     ],
 
     /*
@@ -65,6 +75,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', User::class),
+        ],
+
+        'usuario' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Usuario::class,
         ],
 
         // 'users' => [
