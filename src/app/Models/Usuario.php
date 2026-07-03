@@ -32,8 +32,8 @@ class Usuario extends Authenticatable
         return $this->senha_usuario;
     }
 
-    public function getAuthPasswordName()
-    {
-        return 'senha_usuario';
-    }
+    // public function getAuthPasswordName()
+    // {
+    //     return 'senha_usuario';
+    // }
 }

@@ -11,7 +11,13 @@
 <body class="login-page bg-body-secondary">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../index2.html"><b>Barbearia</b> Felskbarber</a>
+
+            <img src="{{ asset('felsk/img/visual/logo.png') }}" class="logo-felsk" alt="Felsk Barber">
+
+            <a href="#">
+                <b>Felsk</b> Barber
+            </a>
+
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -30,6 +36,8 @@
                 @endif
 
                 <form action="{{ route('admin.login.autenticar') }}" method="post">
+                    @csrf
+
                     <div class="input-group mb-3">
                         <input type="email" name="email_usuario" class="form-control" placeholder="Email" />
                         <div class="input-group-text">

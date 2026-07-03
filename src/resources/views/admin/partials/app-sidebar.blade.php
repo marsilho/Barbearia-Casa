@@ -4,7 +4,7 @@
         <!--begin::Brand Link-->
         <a href="{{ route('admin.dash') }}" class="brand-link">
             <!--begin::Brand Image-->
-            <img src="{{ asset('felsk/img/logo.png') }}" alt="FelskBarber Logo" class="brand-image opacity-75 shadow" />
+            <img src="{{ asset('felsk/img/visual/logo.png') }}" alt="FelskBarber Logo" class="brand-image opacity-75 shadow" />
             <!--end::Brand Image-->
         </a>
         <!--end::Brand Link-->

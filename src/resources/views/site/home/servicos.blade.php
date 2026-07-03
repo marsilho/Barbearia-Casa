@@ -10,6 +10,9 @@
             <img src="{{ asset('felsk/img/barba.png') }}" alt="Barba completa e serviços de barba" />
         </div>
 
-        <a href="#">SAIBA MAIS</a>
+        <a href="#">
+            <i class="bi bi-scissors"></i>
+            Saiba Mais
+        </a>
     </div>
 </section>
