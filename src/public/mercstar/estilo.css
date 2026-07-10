@@ -1,3 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ----------------------------------
+---------- Configurações Gerais ------
+------------------------------------- */
+*,
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #fefefe;
+}
+
+.site {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ----------------------------------
+---------- Cabeçalho (Topo) -----------
+------------------------------------- */
+.topo {
+    background-color: #0f0f0f !important;
+    border-bottom: 1px solid rgba(191, 130, 29, .25);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    padding: 15px 0;
+}
+
+.topo .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.topo h1 {
+    color: #bf821d !important;
+    font-family: "Playfair Display", serif !important;
+    font-size: 24px !important;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin: 0;
+}
+
+/* Navegação Base */
+.topo nav ul, 
+.Navegacao {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center;
+}
+
+.topo nav ul li, 
+.Navegacao li {
+    margin: 0 15px !important;
+    list-style: none !important;
+}
+
+/* Links do Menu com o EFEITO DA BARRINHA FIXED */
+.topo nav ul li a, 
+.Navegacao li a {
+    color: #fefefe !important;
+    font-family: "Playfair Display", serif !important;
+    font-size: 1.1em !important;
+    text-decoration: none !important;
+    position: relative !important;
+    display: inline-block !important;
+    padding: 6px 0 !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Criando a barrinha invisível embaixo */
+.topo nav ul li a::after, 
+.Navegacao li a::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 0% !important;
+    height: 2px !important;
+    background-color: #bf821d !important;
+    transition: width 0.3s ease-in-out !important;
+}
+
+/* Ao passar o mouse OU se a classe 'ativo' estiver na tag <a> */
+.topo nav ul li a:hover::after, 
+.topo nav ul li a.ativo::after,
+.Navegacao li a:hover::after, 
+.Navegacao li a.ativo::after {
+    width: 100% !important;
+}
+
+/* Mudança de cor do texto no hover */
+.topo nav ul li a:hover, 
+.topo nav ul li a.ativo,
+.Navegacao li a:hover, 
+.Navegacao li a.ativo {
+    color: #bf821d !important;
+}
+
+/* Redes Sociais e Ícones do Topo CORRIGIDOS */
+.redes {
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.redes li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+}
+
+.redes li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.redes img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: contain !important;
+    transition: transform .3s ease !important;
+}
+
+/* Filtro para o ícone do instagram caso ele seja preto por padrão */
+.redes a[href*="instagram"] img {
+    filter: invert(1) !important; 
+}
+
+/* Estilização do ícone de Usuário/Perfil Redondo */
+.redes li:last-child img {
+    width: 36px !important;
+    height: 36px !important;
+    background-color: rgba(191, 130, 29, 0.2) !important;
+    border: 1px solid #bf821d !important;
+    border-radius: 50% !important;
+    padding: 6px !important;
+}
+
+.redes a:hover img {
+    transform: scale(1.1) !important;
+}
+
+/* ----------------------------------
+---------- Menu Principal & App -------
+------------------------------------- */
 .app-sidebar.bg-body-secondary.shadow {
     background-color: #0f0f0f !important;
 }
@@ -21,26 +186,16 @@
     width: auto !important;
 }
 
-/* .sidebar-brand {
-    height: 6.5rem;
-} */
-
 .bi.bi-list{
     color: #fefefe;
 }
 
-/* ----------------------------------
----------- Menu principal ---------------
-------------------------------------- */
-/* FUNDO PRINCIPAL */
 .app-main,
 .app-content {
     background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
 }
 
-/* TÍTULO */
-.app-content-header h1,
-h1 {
+.app-content-header h1 {
     color: #fefefe;
     font-weight: 700;
     letter-spacing: .5px;
@@ -66,25 +221,21 @@ h1 {
     box-shadow: 0 12px 28px rgba(0,0,0,.5);
 }
 
-/* NÚMEROS */
 .small-box h3 {
     color: #bf821d !important;
     font-size: 34px;
     font-weight: 800;
 }
 
-/* TEXTOS */
 .small-box p {
     color: #fefefe !important;
     font-weight: 500;
 }
 
-/* ÍCONES */
 .small-box .small-box-icon {
     color: rgba(191, 130, 29, .25) !important;
 }
 
-/* RODAPÉ DO CARD */
 .small-box-footer {
     background-color: rgba(191, 130, 29, .15) !important;
     color: #bf821d !important;
@@ -97,29 +248,8 @@ h1 {
     color: #0f0f0f !important;
 }
 
-/* MENU */
-.nav-sidebar .nav-link {
-    border-radius: 10px;
-    margin: 4px 8px;
-}
-
-.nav-sidebar .nav-link:hover,
-.nav-sidebar .nav-link.active {
-    background-color: rgba(191, 130, 29, .18) !important;
-    color: #bf821d !important;
-}
-
-/* HEADER E FOOTER */
-.app-header,
-.app-footer {
-    background-color: #242424 !important;
-    border-color: rgba(255,255,255,.15) !important;
-    color: #fefefe;
-}
-
-
 /* ----------------------------------
----------- Sidebar ---------------
+---------- Sidebar -------------------
 ------------------------------------- */
 .app-sidebar {
     background: linear-gradient(180deg, #0f0f0f 50%, #1a1a1a 80%) !important;
@@ -127,9 +257,8 @@ h1 {
     overflow-y: hidden;
 }
 
-/* LOGO */
 .sidebar-brand {
-    height: 100px; /* ajuste como quiser */
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +276,6 @@ h1 {
     transform: scale(1.05);
 }
 
-/* TÍTULOS DO MENU */
 .sidebar-menu .nav-header,
 .nav-sidebar .nav-header {
     color: #bf821d !important;
@@ -159,7 +287,6 @@ h1 {
     padding-left: 16px;
 }
 
-/* LINKS */
 .nav-sidebar .nav-link {
     border-radius: 10px;
     margin: 4px 8px;
@@ -167,35 +294,26 @@ h1 {
     color: #fefefe;
 }
 
-/* ÍCONES */
 .nav-sidebar .nav-icon {
     color: #bf821d !important;
     opacity: .9;
 }
 
-/* SETAS */
 .nav-sidebar .nav-arrow {
     color: #bf821d !important;
 }
 
-/* HOVER */
 .nav-sidebar .nav-link:hover {
     background-color: rgba(191, 130, 29, .15) !important;
     color: #bf821d !important;
 }
 
-/* ATIVO */
 .nav-sidebar .nav-link.active {
-    background: linear-gradient(
-        90deg,
-        rgba(191, 130, 29, .28),
-        rgba(191, 130, 29, .06)
-    ) !important;
+    background: linear-gradient(90deg, rgba(191, 130, 29, .28), rgba(191, 130, 29, .06)) !important;
     border-left: 3px solid #bf821d;
     color: #bf821d !important;
 }
 
-/* SUBMENU */
 .nav-treeview .nav-link {
     margin-left: 18px;
     font-size: 14px;
@@ -207,111 +325,13 @@ h1 {
     color: #bf821d !important;
 }
 
-/* SUAVIZAÇÃO */
 .sidebar-wrapper {
     backdrop-filter: blur(5px);
 }
 
 /* ----------------------------------
----------- Calendario ---------------
+---------- Calendario & Cards --------
 ------------------------------------- */
-
-.card {
-    background-color: #fefefe;
-    border: none;
-    border-radius: 10px;
-}
-
-.card-header {
-    background-color: #fefefe;
-    border-bottom: 1px solid #ddd;
-}
-
-.card-title {
-    color: #0f0f0f;
-    font-weight: 600;
-}
-
-/* CALENDÁRIO GERAL */
-.fc {
-    background-color: #2c2c2c;
-    color: #fefefe;
-    font-family: var(--fonteBase);
-}
-
-/* TÍTULO DO MÊS */
-.fc .fc-toolbar-title {
-    color: #bf821d;
-    font-weight: 700;
-    text-transform: capitalize;
-}
-
-/* BOTÕES */
-.fc .fc-button-primary {
-    background-color: #2c2c2c;
-    border-color: #bf821d;
-    color: #fefefe;
-}
-
-.fc .fc-button-primary:hover,
-.fc .fc-button-primary:focus {
-    background-color: #bf821d;
-    border-color: #bf821d;
-    color: #0f0f0f;
-}
-
-/* BOTÃO ATIVO */
-.fc .fc-button-primary:not(:disabled).fc-button-active {
-    background-color: #bf821d;
-    border-color: #bf821d;
-    color: #0f0f0f;
-}
-
-/* CABEÇALHO DOS DIAS */
-.fc-col-header-cell {
-    background-color: #0f0f0f;
-}
-
-.fc-col-header-cell a {
-    color: #bf821d !important;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-/* CÉLULAS DOS DIAS */
-.fc-theme-standard td,
-.fc-theme-standard th {
-    background-color: #2c2c2c;
-    border-color: #777;
-}
-
-/* NÚMEROS DOS DIAS */
-.fc-daygrid-day-number {
-    color: #bf821d !important;
-    text-decoration: none;
-}
-
-/* DIA ATUAL */
-.fc .fc-day-today {
-    background-color: rgba(191, 130, 29, 0.25) !important;
-}
-
-/* EVENTOS */
-.fc-event {
-    background-color: #bf821d !important;
-    border-color: #bf821d !important;
-    color: #0f0f0f !important;
-    font-weight: 600;
-    border-radius: 6px;
-    padding: 3px;
-}
-
-/* LINKS DOS EVENTOS */
-.fc-event-title,
-.fc-event-time {
-    color: #0f0f0f !important;
-}
-
 .card {
     background-color: #1f1f1f;
     border: 1px solid #3a3a3a;
@@ -330,12 +350,73 @@ h1 {
     font-weight: 600;
 }
 
+.fc {
+    background-color: #2c2c2c;
+    color: #fefefe;
+}
 
+.fc .fc-toolbar-title {
+    color: #bf821d;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.fc .fc-button-primary {
+    background-color: #2c2c2c;
+    border-color: #bf821d;
+    color: #fefefe;
+}
+
+.fc .fc-button-primary:hover,
+.fc .fc-button-primary:focus,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+    background-color: #bf821d;
+    border-color: #bf821d;
+    color: #0f0f0f;
+}
+
+.fc-col-header-cell {
+    background-color: #0f0f0f;
+}
+
+.fc-col-header-cell a {
+    color: #bf821d !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    background-color: #2c2c2c;
+    border-color: #777;
+}
+
+.fc-daygrid-day-number {
+    color: #bf821d !important;
+    text-decoration: none;
+}
+
+.fc .fc-day-today {
+    background-color: rgba(191, 130, 29, 0.25) !important;
+}
+
+.fc-event {
+    background-color: #bf821d !important;
+    border-color: #bf821d !important;
+    color: #0f0f0f !important;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.fc-event-title,
+.fc-event-time {
+    color: #0f0f0f !important;
+}
 
 /* ----------------------------------
 -- Gerenciamento de Categorias -----
 ------------------------------------- */
-/* Deixando os icones do editar e desativar ao lado do outro */
 td form {
     display: inline-block;
     margin: 0;
@@ -345,15 +426,14 @@ td .btn {
     margin-right: 5px;
 }
 
-/* BOTÃO NOVA CATEGORIA */
-.card-tools .btn-primary {
+.card-tools .btn-primary,
+.modal .btn-primary {
     background: #bf821d !important;
     border-color: #bf821d !important;
     color: #111 !important;
     font-weight: 700;
 }
 
-/* TABELA */
 .table {
     margin-bottom: 0 !important;
     color: #fff !important;
@@ -382,13 +462,11 @@ td .btn {
     transition: .3s;
 }
 
-/* STATUS */
 .badge {
     border-radius: 20px;
     padding: 6px 12px;
 }
 
-/* AÇÕES */
 .btn-warning {
     background: #bf821d !important;
     border-color: #bf821d !important;
@@ -400,18 +478,12 @@ td .btn {
     border-color: #8b1e2d !important;
 }
 
-/* SCROLL APENAS NA TABELA */
-.card-body.tabela-scroll {
-    max-height: 500px;
-    overflow-y: auto;
-}
-
+.card-body.tabela-scroll,
 .tabela-scroll {
     max-height: 500px;
     overflow-y: auto;
 }
 
-/* SCROLL PERSONALIZADA */
 .card-body::-webkit-scrollbar {
     width: 8px;
 }
@@ -425,12 +497,9 @@ td .btn {
     border-radius: 10px;
 }
 
-
 /* ----------------------------------
--- Estilo do Modal Categorias -----
+---------- Modais & Toasts -----------
 ------------------------------------- */
-
-/* MODAL CATEGORIAS */
 .modal-content {
     background: #1f1f1f !important;
     border: 1px solid rgba(191, 130, 29, 0.45) !important;
@@ -478,13 +547,6 @@ td .btn {
     box-shadow: 0 0 0 0.2rem rgba(191, 130, 29, 0.25) !important;
 }
 
-.modal .btn-primary {
-    background: #bf821d !important;
-    border-color: #bf821d !important;
-    color: #111 !important;
-    font-weight: 700;
-}
-
 .modal .btn-secondary {
     background: #3a3a3a !important;
     border-color: #3a3a3a !important;
@@ -495,9 +557,6 @@ td .btn {
     filter: invert(1);
 }
 
-/* ----------------------------------
--- POP UP das ações -----
-------------------------------------- */
 .toast-felsk {
     background: #1f1f1f;
     color: #fefefe;
@@ -514,12 +573,246 @@ td .btn {
     font-weight: 700;
 }
 
-.toast-felsk-header i {
-    color: #111;
-}
-
 .toast-felsk-body {
     background: #1f1f1f;
     color: #fefefe;
     font-weight: 500;
+}
+
+/* ----------------------------------
+---------- Páginas de Conteúdo -------
+------------------------------------- */
+/* Banner */
+.Banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider-banner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.Txt-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 45px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Txt-banner * {
+    pointer-events: auto;
+}
+
+.Txt-banner h1 {
+    color: #fefefe;
+    font-size: 2.8em;
+    text-align: center;
+    margin: 45px 0 0 0;
+}
+
+.Txt-banner h2 {
+    font-family: "Dancing Script", cursive;
+    color: #bf821d;
+    font-size: 7em;
+    margin: 0 0 5px 0;
+}
+
+.Txt-banner h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.6em;
+    margin: 0px 0px 30px 0;
+    text-align: center;
+    color: #fefefe;
+}
+
+.botao-banner, .botao-sobre, .botao-servicos, .botao-produtos {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #bf821d;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #0f0f0f;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+}
+
+.botao-banner:hover, .botao-sobre:hover, .botao-servicos:hover, .botao-produtos:hover {
+    transform: scale(1.05);
+    background-color: #d89b1d;
+    color: #0f0f0f;
+}
+
+/* Seções de Texto */
+.Sobre, .apresentacao-sobre, .Produtos, .Contato {
+    padding: 40px;
+}
+
+.Sobre img, .apresentacao-sobre img {
+    border-radius: 50px;
+    margin: 10px 0px 10px 40px;
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.TxtSobre h1, .servicos-sobre h1, .servicos-sobre h2, .Produtos h2, .Container h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 4.5em;
+    color: #bf821d;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.TxtSobre p, .servicos-sobre p {
+    font-size: 1.3em;
+    text-align: justify;
+    line-height: 30px;
+    padding: 20px;
+    color: #fefefe;
+}
+
+/* Grid de Produtos */
+.primeira-coluna, .segunda-coluna, .terceira-coluna, .quarta-coluna, .quinta-coluna {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.card-produto {
+    background-color: #2c2c2c;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card-produto:hover {
+    transform: scale(1.03);
+}
+
+.card-produto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-produto h3 {
+    color: #bf821d;
+    font-size: 1.4em;
+    margin: 15px;
+}
+
+.card-produto p {
+    color: #fefefe;
+    margin: 0 15px 15px;
+}
+
+.card-produto a, .botao-personalizado, .botao-contato {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #bf821d;
+    color: #0f0f0f;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.card-produto a:hover, .botao-personalizado:hover, .botao-contato:hover {
+    background-color: #d89b1d;
+    transform: scale(1.03);
+}
+
+/* ----------------------------------
+---------- Rodapé & Fixo -------------
+------------------------------------- */
+.Rodape {
+    background-color: #0f0f0f;
+    text-align: center;
+    padding: 30px 0 10px 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(191, 130, 29, .25);
+}
+
+.Rodape .Departamentos {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.MenuRodape a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fefefe;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Playfair Display", serif;
+}
+
+.MenuRodape a::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #bf821d;
+    transition: width 0.3s ease;
+}
+
+.MenuRodape a:hover::after {
+    width: 100%;
+}
+
+.MenuRodape a:hover {
+    color: #bf821d;
+}
+
+.Desenvolvidopor {
+    background-color: #050505;
+    padding: 10px 0;
+}
+
+.Desenvolvidopor p {
+    color: #666;
+    margin: 0;
+}
+
+/* Whatsapp fixo */
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-fixo img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-fixo img:hover {
+    transform: scale(1.1);
 }
