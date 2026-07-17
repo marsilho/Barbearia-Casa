@@ -70,7 +70,6 @@ body {
 .topo {
     /* Inicio: escuro com opacidade (ex: 50% preto) */
     background-color: rgba(0, 0, 0, 0.7);
-
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -121,7 +120,6 @@ nav ul li a.ativo {
     /* 30px / 16px = 1,875em*/
     /* font-family: var(--fonteMenu); */
     padding-block: 0.5em;
-    /* espacamento do bloco */
     padding-inline: 1.2em;
     text-decoration: none;
     font-family: var(--fonteBase);
@@ -136,29 +134,53 @@ nav ul li a.ativo {
     text-decoration: underline;
 }  */
 
-/* Redes sociais */
+/* ===============================
+   REDES SOCIAIS (MODIFICADO)
+================================= */
 
 .redes {
     display: flex;
-    gap: 1em;
+    align-items: center;
+    gap: 15px; /* Espaço controlado entre as bolinhas */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Itens das redes */
 .redes li {
-    margin-inline-start: 5%;
+    margin: 0; /* Removeu o 5% que desalinhava no responsivo */
 }
 
 /* Botoes das redes */
 .redes a {
-    inline-size: 50px;
-    block-size: 50px;
+    width: 45px; /* Tamanho fixo perfeito para as bolinhas */
+    height: 45px;
     border-radius: 50%;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #373737;
+    color: #ffffff; /* Cor dos ícones */
+    font-size: 1.25rem; /* Controla o tamanho do ícone internamente */
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+/* Efeito Hover das Redes */
 .redes a:hover {
     background-color: var(--corDestaque1);
+    color: #111111; /* Ícone fica escuro no fundo dourado para melhor leitura */
+    transform: translateY(-4px); /* Efeito flutuante */
+    box-shadow: 0 8px 20px rgba(191, 130, 29, 0.45); /* Brilho dourado suave */
+}
+
+/* Garante o alinhamento centralizado do ícone */
+.redes a i {
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ===== BANNER ===== */
@@ -1058,12 +1080,9 @@ hr {
 
 .footer-bottom {
     position: relative;
-
     padding: 25px 80px;
-
     background: #0b0b0b;
     border-top: 1px solid rgba(191, 130, 29, .2);
-
     text-align: center;
 }
 

@@ -15,14 +15,14 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 
 Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
 
-// Rota para enviar o formulário de contato
-Route::post('/contato', [ContatoController::class, 'enviar'])->name('duvidas.enviar');
-
 // Página Sobre
 Route::get('/sobre', [SobreController::class, 'sobre'])->name('sobre');
 
 // Página Serviços
 Route::get('/servicos', [ServicosController::class, 'index'])->name('servicos');
+
+// Rota para enviar o formulário de contato
+Route::post('/contato', [ContatoController::class, 'enviar'])->name('duvidas.enviar');
 
 
 
